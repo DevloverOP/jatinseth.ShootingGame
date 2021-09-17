@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#stadium {
+  background: linear-gradient(to right, black, rgba(0, 0, 0, 0.733));
+  color: white;
+  height: 300px;
+  width: 100%;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#playGround {
+  position: relative;
+  background-color: green;
+  border: 2px solid red;
+  height: 100%;
+  width: 100%;
+  margin: 10px auto 0px;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.power {
+  width: 100px;
+}
+
+#p1char,
+#p2char {
+  height: fit-content;
+  padding: 5px;
+  border-radius: 100%;
+  color: white;
+  cursor: pointer;
+  box-shadow: -2px 0px 5px 2px black;
+}
+#p1char {
+  background-color: red;
+}
+#p2char {
+  background-color: blue;
+}
+
+.fire {
+  color: black;
+  position: absolute;
+  border-radius: 100%;
+  padding: 5px;
+}
+
+@keyframes fire1 {
+  0% {
+    left: calc(0% + 20px);
+    background-color: rgb(255, 255, 0);
+  }
+  100% {
+    left: calc(100% - 30px);
+    background-color: rgb(255, 255, 0);
+    visibility: hidden;
+  }
+}
+
+@keyframes fire2 {
+  0% {
+    right: calc(0% + 20px);
+    background-color: rgb(0, 255, 255);
+  }
+  100% {
+    right: calc(100% - 30px);
+    background-color: rgb(0, 255, 255);
+    visibility: hidden;
+  }
+}
+
+.actions,
+#health {
+  padding: 2px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#restart {
+  margin-top: 5px;
+  padding: 3px;
+  border-radius: 10px;
+  box-shadow: 1px 2px 5px 1px grey;
+  display: none;
+  background-color: tomato;
+  color: white;
+}
+#flashBoard {
+  background-color: bisque;
+  color: black;
+  position: absolute;
+  top: 130px;
+  left: calc(50% - 100px);
+  height: auto;
+  width: fit-content;
+  padding: 10px 20px 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 2px grey;
+  animation: leaderBoard 1s alternate both;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 50;
+}
+
+@keyframes leaderBoard {
+  0% {
+    transform: perspective(100px) scale(1);
+  }
+  50% {
+    transform: perspective(100px) scale(1.4);
+  }
+  100% {
+    transform: perspective(100px) scale(1.3);
+  }
+}

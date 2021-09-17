@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shooting-Game</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <form>
+      <!-- <div id="oponentSelection">
+        <input type="radio" value='2' id="twop" name="oponent">
+        <label for="twop">2-Players</label>
+        <p>VS</p>
+        <input type="radio" value='1' id="bot" name="oponent" >
+        <label for="bot">Bot</label>
+      </div> -->
+
+      <input type="text" id="player1" value="Player1" />
+      <span>VS</span>
+      <input type="text" id="player2" value="Player2" />
+      <button id="start">Start Game</button>
+    </form>
+
+    <div id="stadium">
+      <div class="actions">
+        <div class="power">
+          <label for="power">P1-Power</label>
+          <input type="number" min="1" max="5" id="p1_Power" value="1" />
+        </div>
+        <div>
+          <h4 id="round">ROUND</h4>
+          <h4 id="score">Score:</h4>
+        </div>
+        <div class="power">
+          <label for="power">P2-Power</label>
+          <input type="number" min="1" max="5" id="p2_Power" value="1" />
+        </div>
+      </div>
+      <div id="playGround">
+        <p id="p1char">p1</p>
+        <p id="p2char">p2</p>
+      </div>
+      <div id="flashBoard">
+        <h2>Round</h2>
+        <h3>Player Wins</h3>
+        <h4>Score</h4>
+        <button id="restart">Restart</button>
+      </div>
+
+      <div id="health">
+        <label id="p1_health">Player 1 Health</label>
+        <label id="p2_health">Player 2 Health</label>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
